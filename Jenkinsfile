@@ -13,6 +13,7 @@ pipeline {
   stages {
     stage('Checkout External Project'){
       steps{
+      credentialsId: 'github-muzaffar',
       git 'https://github.com/muzafferjoya/reading-app.git'
     }
   }
