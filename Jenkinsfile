@@ -13,7 +13,7 @@ pipeline {
   stages {
     stage('Checkout External Project'){
       steps{
-      git 'git@github.com:muzafferjoya/reading-app.git'
+      git 'https://github.com/muzafferjoya/reading-app.git'
     }
   }
     stage('Install Packages') {
