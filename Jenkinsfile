@@ -12,7 +12,7 @@ pipeline {
   }
   stages {
     stage('Checkout External Project'){
-      step{
+      steps{
       git 'https://github.com/muzafferjoya/reading-app.git'
     }
   }
