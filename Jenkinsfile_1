@@ -1,0 +1,23 @@
+pipeline { 
+	environment {
+	  registry = "muzaffarjoya/react-app"
+	  registryCredntial = 'dockerhub'
+}
+
+agent any 
+     stages {
+	stage('Clone Git') {
+	 steps {
+	  git 'https://github.com/muzafferjoya/reading-app.git'
+}
+}
+	stage('Building Image'){
+	 steps{
+	  script {
+		docker.build registry + ":$BUILD_NUMBER"
+	} 		
+	}
+}
+}
+
+}
